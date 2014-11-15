@@ -1,7 +1,7 @@
 # ScoreboardRubywarrior
 
 This gem monkey patches ruby-warrior to allow scores to be
-automatically posted to webserver (currently https://chchruby-warrior.herokuapp.com/)
+automatically posted to a webserver (currently https://chchruby-warrior.herokuapp.com/)
 
 There is plenty of scope for improving the metrics etc, so please
 feel free to add your (tested?! ;) patches and send them our way.
