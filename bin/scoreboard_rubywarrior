@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require 'scoreboard_rubywarrior'
+runner = RubyWarrior::Runner.new(ARGV, STDIN, STDOUT)
+runner.run
