@@ -48,8 +48,10 @@ require 'ruby_warrior/abilities/explode'
 require 'ruby_warrior/abilities/detonate'
 require 'ruby_warrior/abilities/form'
 
-require 'scoreboard_rubywarrior/reporter.rb'
-require 'scoreboard_rubywarrior/monkeys/level.rb'
+require 'scoreboard_rubywarrior/reporter'
+require 'scoreboard_rubywarrior/concatenator'
+require 'scoreboard_rubywarrior/errors'
+require 'scoreboard_rubywarrior/monkeys/level'
 
 module ScoreboardRubywarrior
 
