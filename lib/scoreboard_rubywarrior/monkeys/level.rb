@@ -32,7 +32,8 @@ module RubyWarrior
         @profile.abilities = warrior.abilities.keys
         report[:warrior_name] = @profile.warrior_name
         report[:level_number] = @number
-        binding.pry
+        report[:source_code] = ::ScoreboardRubywarrior::Concatenator.new(Dir.pwd).concatenate
+
         ::ScoreboardRubywarrior::Reporter.send_level_update(report)
       end
     end
