@@ -1,3 +1,4 @@
+require 'pry'
 # here we patch the level.rb class to add our reporting
 module RubyWarrior
   class Level
@@ -31,6 +32,7 @@ module RubyWarrior
         @profile.abilities = warrior.abilities.keys
         report[:warrior_name] = @profile.warrior_name
         report[:level_number] = @number
+        binding.pry
         ::ScoreboardRubywarrior::Reporter.send_level_update(report)
       end
     end

@@ -6,6 +6,7 @@ module ScoreboardRubywarrior
     end
 
     def concatenate
+      raise ScoreboardRubywarrior::InvalidPlayerDirectory, "player.rb not present" unless player_file_exists?
       all_ruby_files.each do |file|
         append_file(file)
       end
@@ -31,6 +32,10 @@ module ScoreboardRubywarrior
       contents_of_files << "#---------------" << "\n"
       contents_of_files << file_contents << "\n"
       contents_of_files << "#---------------" << "\n"
+    end
+
+    def player_file_exists?
+      File.exist?(path + "/player.rb")
     end
   end
 end
