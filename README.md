@@ -16,6 +16,17 @@ The website code is also open sourced at https://github.com/patrickdavey/rubywar
 
 Please see Ryan Bates' instructions [on the original ruby-warrior](https://github.com/ryanb/ruby-warrior/)
 
+## Endpoint
+
+The website where the scores can be viewed (and source inspected etc.) is
+available [on github](https://github.com/patrickdavey/rubywarrior_scoreboard)
+by default, the scoreboard_rubywarrior will post to the demo herokuapp at 
+http://chchruby.herokuapp.com/scores .
+
+If you want to post to your own custom website for your own meetup, all
+you need to do is create a `.scoreboard_endpoint` file in the root of the
+rubywarrior directory (so in the same directory as player.rb) and fill in
+the URL that you want the scores to be posted to.
 
 ## Contributing
 
