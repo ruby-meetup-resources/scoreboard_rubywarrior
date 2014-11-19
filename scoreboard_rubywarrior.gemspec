@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
                           wonderful fun that battling monsters with ruby can be.
 
                           Pull requests very welcome :)}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/ruby-meetup-resources/scoreboard_rubywarrior"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
