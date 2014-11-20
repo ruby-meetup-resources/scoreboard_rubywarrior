@@ -1,4 +1,3 @@
-require 'pry'
 # here we patch the level.rb class to add our reporting
 module RubyWarrior
   class Level
@@ -24,6 +23,13 @@ module RubyWarrior
         UI.puts "Total Score: " + score_calculation(@profile.current_epic_score, score)
         @profile.current_epic_grades[@number] = (score / ace_score.to_f) if ace_score
         @profile.current_epic_score += score
+        heroku_report = report
+        heroku_report[:total_score] = score
+        heroku_report[:source_code] = ::ScoreboardRubywarrior::Concatenator.new(Dir.pwd).concatenate
+        heroku_report[:warrior_name] = @profile.warrior_name
+        heroku_report[:level_number] = @number
+
+        ::ScoreboardRubywarrior::Reporter.send_level_update(heroku_report)
       else
         total_score =  score_calculation(@profile.score, score)
         report[:total_score] = total_score
