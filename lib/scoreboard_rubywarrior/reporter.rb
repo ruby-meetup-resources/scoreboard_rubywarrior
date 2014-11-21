@@ -1,6 +1,6 @@
 module ScoreboardRubywarrior
   class Reporter
-    REPORTER_API_ENDPOINT_URI = 'http://chchruby-warrior.herokuapp.com/scores'
+    REPORTER_API_ENDPOINT_URI = 'http://rubywarrior.herokuapp.com/scores'
 
     include HTTParty
     base_uri REPORTER_API_ENDPOINT_URI

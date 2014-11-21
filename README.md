@@ -1,7 +1,7 @@
 # ScoreboardRubywarrior
 
 This gem monkey patches ruby-warrior to allow scores to be
-automatically posted to a webserver (currently https://chchruby-warrior.herokuapp.com/)
+automatically posted to a webserver (currently https://rubywarrior.herokuapp.com/)
 
 There is plenty of scope for improving the metrics etc, so please
 feel free to add your (tested?! ;) patches and send them our way.
@@ -21,7 +21,7 @@ Please see Ryan Bates' instructions [on the original ruby-warrior](https://githu
 The website where the scores can be viewed (and source inspected etc.) is
 available [on github](https://github.com/patrickdavey/rubywarrior_scoreboard)
 by default, the scoreboard_rubywarrior will post to the demo herokuapp at 
-http://chchruby.herokuapp.com/scores .
+http://rubywarrior.herokuapp.com/scores .
 
 If you want to post to your own custom website for your own meetup, all
 you need to do is create a `.scoreboard_endpoint` file in the root of the
