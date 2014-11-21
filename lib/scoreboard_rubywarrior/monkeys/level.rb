@@ -23,13 +23,13 @@ module RubyWarrior
         UI.puts "Total Score: " + score_calculation(@profile.current_epic_score, score)
         @profile.current_epic_grades[@number] = (score / ace_score.to_f) if ace_score
         @profile.current_epic_score += score
-        heroku_report = report
-        heroku_report[:total_score] = score
-        heroku_report[:source_code] = ::ScoreboardRubywarrior::Concatenator.new(Dir.pwd).concatenate
-        heroku_report[:warrior_name] = @profile.warrior_name
-        heroku_report[:level_number] = @number
+        report[:total_score] = score
+        report[:source_code] = ::ScoreboardRubywarrior::Concatenator.new(Dir.pwd).concatenate
+        report[:warrior_name] = @profile.warrior_name
+        report[:level_number] = @number
+        report[:tower] = @profile.tower.name
 
-        ::ScoreboardRubywarrior::Reporter.send_level_update(heroku_report)
+        ::ScoreboardRubywarrior::Reporter.send_level_update(report)
       else
         total_score =  score_calculation(@profile.score, score)
         report[:total_score] = total_score
@@ -39,6 +39,7 @@ module RubyWarrior
         report[:warrior_name] = @profile.warrior_name
         report[:level_number] = @number
         report[:source_code] = ::ScoreboardRubywarrior::Concatenator.new(Dir.pwd).concatenate
+        report[:tower] = @profile.tower.name
 
         ::ScoreboardRubywarrior::Reporter.send_level_update(report)
       end
