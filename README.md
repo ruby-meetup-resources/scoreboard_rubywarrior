@@ -6,7 +6,7 @@ automatically posted to a webserver (currently https://rubywarrior.herokuapp.com
 There is plenty of scope for improving the metrics etc, so please
 feel free to add your (tested?! ;) patches and send them our way.
 
-The website code is also open sourced at https://github.com/patrickdavey/rubywarrior_scoreboard
+The website code is also open sourced at https://github.com/ruby-meetup-resources/rubywarrior_scoreboard
 
 ## Installation
 
@@ -19,7 +19,7 @@ Please see Ryan Bates' instructions [on the original ruby-warrior](https://githu
 ## Endpoint
 
 The website where the scores can be viewed (and source inspected etc.) is
-available [on github](https://github.com/patrickdavey/rubywarrior_scoreboard)
+available [on github](https://github.com/ruby-meetup-resources/rubywarrior_scoreboard)
 by default, the scoreboard_rubywarrior will post to the demo herokuapp at 
 http://rubywarrior.herokuapp.com/scores .
 
@@ -30,7 +30,7 @@ the URL that you want the scores to be posted to.
 
 ## Contributing
 
-1. Fork it ( https://github.com/patrickdavey/scoreboard_rubywarrior/fork )
+1. Fork it ( https://github.com/ruby-meetup-resources/scoreboard_rubywarrior/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
